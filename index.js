@@ -1,11 +1,8 @@
 const express = require('express');
 const app = express();
 
-app.get('/contato', (req, res) => {
-  res.json({
-    email: "contato@email.com",
-    telefone: "(81) 99999-9999"
-  });
+app.get('/erro', (req, res) => {
+  res.status(404).send('Página não encontrada');
 });
 
 app.listen(
