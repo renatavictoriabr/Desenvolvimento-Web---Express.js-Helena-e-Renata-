@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express();
 
-app.get('/inicio', (req, res) => {
-  res.redirect('/');
+app.get('/usuarios/:id', (req, res) => {
+  const id = req.params.id;
+  res.send(`ID do usuário: ${id}`);
 });
 
 app.listen(
