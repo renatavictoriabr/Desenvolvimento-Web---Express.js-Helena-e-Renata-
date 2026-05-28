@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Bem-vindo ao sistema');
+app.get('/sobre', (req, res) => {
+  res.send('Esta é uma aplicação Express.js criada para demonstrar o funcionamento de rotas e o uso do framework Node.js.');
 });
 
 app.listen(
