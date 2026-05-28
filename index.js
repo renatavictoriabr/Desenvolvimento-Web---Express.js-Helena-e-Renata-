@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
 
-app.get('/usuarios/:id', (req, res) => {
-  const id = req.params.id;
-  res.send(`ID do usuário: ${id}`);
+app.get('/produtos/:nome', (req, res) => {
+  const nome = req.params.nome;
+  res.send(`Produto: ${nome}`);
 });
 
 app.listen(
