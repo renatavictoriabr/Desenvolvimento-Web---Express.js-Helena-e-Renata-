@@ -1,9 +1,11 @@
 const express = require('express');
 const app = express();
 
-app.get('/buscar', (req, res) => {
-  const nome = req.query.nome;
-  res.send(`Buscando por: ${nome}`);
+app.get('/produtos', (req, res) => {
+  const categoria = req.query.categoria;
+  const pagina = req.query.pagina;
+  
+  res.send(`Categoria: ${categoria} | Página: ${pagina}`);
 });
 
 app.listen(
